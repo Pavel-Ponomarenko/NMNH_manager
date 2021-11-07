@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  position: sticky;
+  padding-right: 20px;
+  padding-top: 20px;
+  top: 0;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__link {
+  border: 2px solid #bc422300;
+  margin: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.nav__link:hover {
+  border: 2px solid #bc4123;
+}

@@ -1,0 +1,33 @@
+.mainPage {
+  margin: 3% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 75%;
+}
+
+.mainPage_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 95%;
+  height: 95%;
+}
+
+.mainPage_title {
+  color: #ffffff;
+  font-size: 8vh;
+}
+
+.mainPage_subtitle {
+  color: #ffffff;
+  font-size: 6vh;
+  text-align: center;
+}
+
+.mainPage_button {
+  width: 75px;
+  height: 25px;
+}

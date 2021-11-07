@@ -1,0 +1,23 @@
+.converter {
+  margin: 3% auto;
+  padding-top: 15px;
+  width: 90%;
+  height: 75%;
+  display: grid;
+  grid: repeat(2, 50%) / repeat(3, 33%);
+}
+
+.converter_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+  background-color: #0b172aa1;
+}
+
+.box_text {
+  color: #bc4123;
+  font-size: 30px;
+}

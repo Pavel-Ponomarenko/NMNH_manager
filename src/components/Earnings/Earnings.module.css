@@ -1,0 +1,34 @@
+.earnings {
+  margin: 3% auto;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+  height: 75%;
+  background-color: #0b172aa1;
+}
+
+.earnings_header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.earnings_body {
+  display: flex;
+  padding-left: 15px;
+}
+
+.earnings_card {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+}
+
+.earnings_amount {
+  font-size: 35px;
+  color: black;
+}
