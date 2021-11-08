@@ -12,8 +12,8 @@ export function Converter() {
       .then(res => res.json())
       .then(
         (result) => {
-          setIsLoaded(true);
           setItems(result);
+          setIsLoaded(true);
         },
         (error) => {
           setIsLoaded(true);

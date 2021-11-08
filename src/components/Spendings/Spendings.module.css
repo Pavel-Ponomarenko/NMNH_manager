@@ -16,5 +16,21 @@
 }
 
 .spendings_body {
+  display: flex;
   padding-left: 15px;
+}
+
+.spendings_card {
+  display: flex;
+  border: 2px solid black;
+  margin: 2px;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+}
+
+.spendings_amount {
+  font-size: 35px;
+  color: black;
 }

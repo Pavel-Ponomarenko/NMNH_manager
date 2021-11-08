@@ -19,7 +19,7 @@ export function Modal({ onClick, active, setActive, children }) {
     } else {
       console.log(text)
     }
-
+    onClick(text);
     setText("");
     setActive(false);
   };
