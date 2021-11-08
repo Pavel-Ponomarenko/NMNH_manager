@@ -19,6 +19,32 @@
   height: 100%;
   object-fit: cover;
 }
+
+.slideContent {
+  position: fixed;
+  top: 20%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideTitle {
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 3px #000;
+  font-size: 45px;
+}
+
+.slideText {
+  text-align: center;
+  padding-top: 10%;
+  max-width: 900px;
+  color: white;
+  font-size: 25px;
+}
+
 .active-anim {
   opacity: 1;
 }

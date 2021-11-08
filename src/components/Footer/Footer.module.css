@@ -3,5 +3,7 @@
   height: 5%;
   position: fixed;
   bottom: 0;
-  background-color: rgb(170, 38, 38);
+  text-align: center;
+  background-color: #1d2431;
+  color: #ffffff;
 }

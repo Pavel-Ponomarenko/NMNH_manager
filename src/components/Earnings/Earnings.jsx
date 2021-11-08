@@ -25,6 +25,18 @@ export function Earnings() {
         <div className={styles.earnings_card}>
           <p className={styles.earnings_amount}>?</p>
         </div>
+        <div className={styles.earnings_card}>
+          <p className={styles.earnings_amount}>?</p>
+        </div>
+        <div className={styles.earnings_card}>
+          <p className={styles.earnings_amount}>?</p>
+        </div>
+        <div className={styles.earnings_card}>
+          <p className={styles.earnings_amount}>?</p>
+        </div>
+        <div className={styles.earnings_card}>
+          <p className={styles.earnings_amount}>?</p>
+        </div>
       </div>
       <Modal active={modalActive} setActive={setModalActive}>
         <h3 className="modal__title">Adding of earnings</h3>

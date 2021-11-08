@@ -37,8 +37,12 @@ export function Slider() {
                     key={obj.id}
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                     >
+                        <div className="slideContent">   
+                        <h1 className="slideTitle">{obj.title}</h1>
+                        <p className="slideText">{obj.text}</p>
+                        </div>
                         <img 
-                        src={process.env.PUBLIC_URL + `/assets/euro${index + 1}.jpg`} 
+                        src={process.env.PUBLIC_URL + `/assets/euro${index + 1}.jpg`} alt="no-matter"
                         />
                     </div>
                 )
