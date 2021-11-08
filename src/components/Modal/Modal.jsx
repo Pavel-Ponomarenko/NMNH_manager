@@ -12,14 +12,14 @@ export function Modal({ onClick, active, setActive, children }) {
   };
 
   const onClickAdd = () => {
-
     if (!text) {
       alert("type only numbers");
       return;
     } else {
-      console.log(text)
+      console.log(text);
     }
 
+    onClick(text);
     setText("");
     setActive(false);
   };

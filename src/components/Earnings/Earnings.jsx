@@ -7,9 +7,16 @@ import { Modal } from "../Modal";
 import styles from "./Earnings.module.css";
 import buttonStyles from "../Button/Button.module.css";
 
-export function Earnings() {
+const getId = () => "_" + Math.random().toString(16).slice(2);
 
+export function Earnings() {
   const [modalActive, setModalActive] = useState(false);
+  const [earnings, setEarnings] = useState([]);
+
+  const addEarning = (amount) => {
+    setEarnings([...earnings, { id: getId(), amount }]);
+  };
+
   return (
     <div className={styles.earnings}>
       <header className={styles.earnings_header}>
@@ -22,23 +29,18 @@ export function Earnings() {
         >
           +
         </Button>
-        <div className={styles.earnings_card}>
-          <p className={styles.earnings_amount}>?</p>
-        </div>
-        <div className={styles.earnings_card}>
-          <p className={styles.earnings_amount}>?</p>
-        </div>
-        <div className={styles.earnings_card}>
-          <p className={styles.earnings_amount}>?</p>
-        </div>
-        <div className={styles.earnings_card}>
-          <p className={styles.earnings_amount}>?</p>
-        </div>
-        <div className={styles.earnings_card}>
-          <p className={styles.earnings_amount}>?</p>
-        </div>
+
+        {earnings.map((item) => (
+          <div className={styles.earnings_card} key={item.id}>
+            <p className={styles.earnings_amount}>{item.amount}</p>
+          </div>
+        ))}
       </div>
-      <Modal active={modalActive} setActive={setModalActive}>
+      <Modal
+        active={modalActive}
+        setActive={setModalActive}
+        onClick={addEarning}
+      >
         <h3 className="modal__title">Adding of earnings</h3>
         <Button
           className={buttonStyles.button_close}
