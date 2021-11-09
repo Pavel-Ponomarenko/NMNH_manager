@@ -25,7 +25,7 @@ export function Earnings() {
       </header>
       <div className={styles.earnings_body}>
         <Button
-          className={buttonStyles.button_add}
+          className={buttonStyles.button_openModal}
           onClick={() => setModalActive(true)}
         >
           +

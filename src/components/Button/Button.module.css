@@ -2,7 +2,7 @@ button {
   font-family: "Zen Kurenaido", sans-serif;
 }
 
-.button_add {
+.button_openModal {
   width: 70px;
   height: 70px;
   background-color: black;

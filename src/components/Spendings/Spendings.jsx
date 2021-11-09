@@ -25,7 +25,7 @@ export function Spendings() {
       </header>
       <div className={styles.spendings_body}>
         <Button
-          className={buttonStyles.button_add}
+          className={buttonStyles.button_openModal}
           onClick={() => setModalActive(true)}
         >
           +
