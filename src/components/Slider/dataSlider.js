@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import './Slider.css'
 
 const dataSlider = [
   {
@@ -18,13 +19,19 @@ const dataSlider = [
   },
   {
     id: uuidv4(),
-    title: "",
-    text: "",
+    title: "Features in development state",
+    text: <ul className="slider_list">
+      <li className="list_item">Converter(now there are only exchange rates).</li>
+      <li className="list_item">Spinners for loading data from local storage and API.</li>
+      <li className="list_item">Adding of types for earnings and spendings.</li>
+      <li className="list_item">Sorting for earnings and spendings by month and type.</li>
+      <li className="list_item">Pie-charts for earnings and spendings pages.</li>
+    </ul>,
   },
   {
     id: uuidv4(),
-    title: "Join us",
-    text: "",
+    title: "Join us!",
+    text: "And remember forever <<No Money - No Honey>>",
   },
 ];
 

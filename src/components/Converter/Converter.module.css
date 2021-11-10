@@ -9,15 +9,24 @@
 
 .converter_box {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
   width: 80%;
   height: 80%;
+  text-align: center;
   background-color: #0b172aa1;
+  border: 2px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.box_title {
+  color: #ffffff;
+  font-size: 34px;
 }
 
 .box_text {
-  color: #bc4123;
-  font-size: 30px;
+  color: #ffffff;
+  font-size: 28px;
 }

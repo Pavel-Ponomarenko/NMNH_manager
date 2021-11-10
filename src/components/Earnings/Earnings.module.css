@@ -6,31 +6,44 @@
   justify-content: flex-start;
   width: 90%;
   height: 75%;
+  border: 2px solid white;
   background-color: #0b172aa1;
+  box-shadow: 0 10px 20px #00000033;
 }
 
 .earnings_header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 5%;
   width: 100%;
+  height: 7%;
 }
 
 .earnings_body {
   display: flex;
-  padding-left: 15px;
+  flex-wrap: wrap;
+  padding: 2% 2%;
+}
+
+.earnings_title {
+  font-size: 25px;
+  color: #fff;
 }
 
 .earnings_card {
   display: flex;
+  flex-wrap: wrap;
   border: 2px solid black;
-  margin: 2px;
+  margin: 0 5px;
   justify-content: center;
+  align-items: center;
   width: 70px;
   height: 70px;
+  text-align: center;
   background-color: #fff;
 }
 
 .earnings_amount {
-  font-size: 35px;
+  font-size: 25px;
   color: black;
 }

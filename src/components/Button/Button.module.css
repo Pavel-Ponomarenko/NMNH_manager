@@ -3,19 +3,9 @@ button {
 }
 
 .button_openModal {
-  width: 70px;
-  height: 70px;
-  background-color: black;
-  color: blanchedalmond;
-  font-size: 35px;
-}
-
-.button_module {
-  width: 70px;
-  height: 70px;
-  background-color: rgb(158, 34, 34);
-  color: blanchedalmond;
-  font-size: 65px;
+  width: 25%;
+  background-color: #122e5ca1;
+  color: #ffffff;
 }
 
 .mainPage_button {
@@ -32,9 +22,26 @@ button {
 }
 
 .button_close {
-  border: transparent;
-  border-color: #ffffff;
   position: fixed;
-  top: 5px;
-  right: 5px;
+  top: 0;
+  right: 1%;
+  font-size: 35px;
+  border: 0 transparent;
+  color: #ff0000;
+  background-color: transparent;
+}
+
+.button_close:hover {
+  color: #d40000;
+}
+
+.button_add {
+  border: 0 transparent;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.button_add:hover {
+  color: #aca2a2;
 }

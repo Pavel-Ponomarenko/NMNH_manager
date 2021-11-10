@@ -19,16 +19,25 @@
 }
 
 .modal__content {
+  width: 40%;
+  height: 25%;
+  padding: 1% 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
   border-radius: 12px;
-  background-color: rgb(255, 255, 255);
+  background-color: #122e5ca1;
+  color: #ffffff;
+  border: 2px solid white;
   transform: scale(0.5);
   transition: 0.4s all;
 }
 
 .modal__content.active {
   transform: scale(1);
+}
+
+.modal_title {
+  font-size: 25px;
 }

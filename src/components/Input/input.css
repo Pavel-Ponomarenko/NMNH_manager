@@ -1,0 +1,10 @@
+input {
+  width: 40%;
+  height: 25%;
+  font-size: 18px;
+  text-align: center;
+}
+
+input:focus {
+  border: 2px solid rgb(85, 81, 81);
+}

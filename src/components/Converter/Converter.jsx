@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 import styles from "./Converter.module.css";
 
@@ -9,7 +9,7 @@ export function Converter() {
 
   useEffect(() => {
     fetch(`https://www.nbrb.by/api/exrates/rates?periodicity=0`)
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
         (result) => {
           setItems(result);
@@ -19,78 +19,83 @@ export function Converter() {
           setIsLoaded(true);
           setError(error);
         }
-      )
-  }, [])
+      );
+  }, []);
 
-  const usd = items.find(item => item.Cur_ID === 431);
-  const eur = items.find(item => item.Cur_ID === 451);
-  const uah = items.find(item => item.Cur_ID === 449);
-  const jpy = items.find(item => item.Cur_ID === 508);
+  function exchangeBox(currency) {
+    return (
+      <div className={styles.converter_box}>
+        <h3 className={styles.box_title}>
+          Exchange rate of {currency.Cur_Abbreviation} to BYN
+        </h3>
+        <p className={styles.box_text}>
+          1 = {currency.Cur_OfficialRate.toFixed(3)} BYN
+        </p>
+      </div>
+    );
+  }
+
+  const usd = items.find((item) => item.Cur_ID === 431);
+  const eur = items.find((item) => item.Cur_ID === 451);
+  const uah = items.find((item) => item.Cur_ID === 449);
+  const jpy = items.find((item) => item.Cur_ID === 508);
 
   if (error) {
-  return (
-    <div className={styles.converter}>
+    const errorBox = (
       <div className={styles.converter_box}>
-        <p className={styles.box_text}>Ошибка: {error.message}</p>
+        <p className={styles.box_title}>Ошибка: {error.message}</p>
       </div>
+    );
+
+    return (
+      <div className={styles.converter}>
+        {errorBox}
+        {errorBox}
+        {errorBox}
+        {errorBox}
+        <div className={styles.converter_box}>
+        <p className={styles.box_text}>Ooops, developers are working...</p> 
+        </div>
+        <div className={styles.converter_box}>
+        <p className={styles.box_text}>Ooops, developers are working...</p> 
+        </div>
+      </div>
+    );
+  } else if (!isLoaded) {
+    const loadingBox = (
       <div className={styles.converter_box}>
-        <p className={styles.box_text}>Ошибка: {error.message}</p>
+        <p className={styles.box_title}>Загрузка...</p>
       </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>Ошибка: {error.message}</p>
+    );
+
+    return (
+      <div className={styles.converter}>
+        {loadingBox}
+        {loadingBox}
+        {loadingBox}
+        {loadingBox}
+        <div className={styles.converter_box}>
+        <p className={styles.box_text}>Ooops, developers are working...</p> 
+        </div>
+        <div className={styles.converter_box}>
+        <p className={styles.box_text}>Ooops, developers are working...</p> 
+        </div>
       </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>Ошибка: {error.message}</p>
-      </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>The amount of money you earn in ...</p>
-      </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>The amount of money you spend in ...</p>
-      </div>
-    </div>
-  );
-  } else if(!isLoaded) {
-    return  <div className={styles.converter}>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>Загрузка...</p>
-      </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>Загрузка...</p>
-      </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>Загрузка...</p>
-      </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>Загрузка...</p>
-      </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>The amount of money you earn in ...</p>
-      </div>
-      <div className={styles.converter_box}>
-        <p className={styles.box_text}>The amount of money you spend in ...</p>
-      </div>
-    </div> 
+    );
   } else {
-    return  <div className={styles.converter}>
-    <div className={styles.converter_box}>
-      <p className={styles.box_text}>1&#36; = {usd.Cur_OfficialRate}BYN</p>
-    </div>
-    <div className={styles.converter_box}>
-      <p className={styles.box_text}>1&euro; = {eur.Cur_OfficialRate}BYN</p>
-    </div>
-    <div className={styles.converter_box}>
-      <p className={styles.box_text}>100&yen; = {jpy.Cur_OfficialRate}</p>
-    </div>
-    <div className={styles.converter_box}>
-      <p className={styles.box_text}>100&#8372; = {uah.Cur_OfficialRate}</p>
-    </div>
-    <div className={styles.converter_box}>
-      <p className={styles.box_text}>The amount of money you earn in ...</p>
-    </div>
-    <div className={styles.converter_box}>
-      <p className={styles.box_text}>The amount of money you spend in ...</p>
-    </div>
-  </div>
+    return (
+      <div className={styles.converter}>
+        {exchangeBox(usd)}
+        {exchangeBox(eur)}
+        {exchangeBox(jpy)}
+        {exchangeBox(uah)}
+        <div className={styles.converter_box}>
+        <p className={styles.box_text}>Ooops, developers are working...</p> 
+        </div>
+        <div className={styles.converter_box}>
+          <p className={styles.box_text}>Ooops, developers are working...</p> 
+        </div>
+      </div>
+    );
   }
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../Button";
 import { Input } from "../Input";
 
+import buttonStyles from "../Button/Button.module.css";
 import "./modal.css";
 
 export function Modal({ onClick, active, setActive, children }) {
@@ -13,15 +14,14 @@ export function Modal({ onClick, active, setActive, children }) {
 
   const onClickAdd = () => {
 
-    if (!text) {
-      alert("type only numbers");
+    if (/\D/.test(text)) {
+      alert("Please type only numbers");
       return;
     } else {
-      console.log(text)
-    }
     onClick(text);
     setText("");
     setActive(false);
+    }
   };
 
   return (
@@ -33,11 +33,9 @@ export function Modal({ onClick, active, setActive, children }) {
         className={active ? "active modal__content" : "modal__content"}
         onClick={(e) => e.stopPropagation()}
       >
-        <div>
           {children}
-          <Input value={text} onChange={onChangeInput} placeholder="Type in" />
-          <Button onClick={() => onClickAdd()}> +</Button>
-        </div>
+          <Input value={text} onChange={onChangeInput} placeholder="Type in the amount in BYN" />
+          <Button className={buttonStyles.button_add} onClick={() => onClickAdd()}>&#10010;</Button>
       </div>
     </div>
   );

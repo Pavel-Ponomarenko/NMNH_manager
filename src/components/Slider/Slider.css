@@ -4,6 +4,7 @@
   margin: 3% auto;
   position: relative;
   overflow: hidden;
+  background-color: #0b172aa1;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -12,25 +13,21 @@
   height: 100%;
   position: absolute;
   opacity: 0;
+  border: 2px solid white;
   transition: opacity ease-in-out 0.4s;
-}
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .slideContent {
-  position: fixed;
-  top: 20%;
-  left: 15%;
+  width: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .slideTitle {
+  padding-top: 5%;
   text-align: center;
   color: white;
   text-shadow: 3px 3px 3px #000;
@@ -39,8 +36,7 @@
 
 .slideText {
   text-align: center;
-  padding-top: 10%;
-  max-width: 900px;
+  max-width: 80%;
   color: white;
   font-size: 25px;
 }
@@ -96,4 +92,15 @@
 }
 .dot.active {
   background: rgb(32, 32, 32);
+}
+
+.slider_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list_item {
+  padding-bottom: 1%;
+  list-style: circle;
 }

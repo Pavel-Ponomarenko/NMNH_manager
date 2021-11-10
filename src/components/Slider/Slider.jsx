@@ -41,9 +41,6 @@ export function Slider() {
                         <h1 className="slideTitle">{obj.title}</h1>
                         <p className="slideText">{obj.text}</p>
                         </div>
-                        {/* <img 
-                        src={process.env.PUBLIC_URL + `/assets/euro${index + 1}.jpg`} alt="no-matter"
-                        /> */}
                     </div>
                 )
             })}
