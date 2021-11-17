@@ -33,16 +33,16 @@
 .spendings_card {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid black;
+  border: 2px solid #ffffff;
   margin: 0 5px;
   justify-content: center;
   align-items: center;
   width: 70px;
   height: 70px;
   text-align: center;
-  background-color: #fff;
+  background-color: #122e5cce;
 }
 .spendings_amount {
   font-size: 25px;
-  color: black;
+  color: #ffffff;
 }

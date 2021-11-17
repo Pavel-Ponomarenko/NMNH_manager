@@ -31,7 +31,7 @@ const dataSlider = [
   {
     id: uuidv4(),
     title: "Join us!",
-    text: "And remember forever <<No Money - No Honey>>",
+    text: "And remember <<No Money - No Honey>>",
   },
 ];
 

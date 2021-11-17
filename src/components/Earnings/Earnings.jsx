@@ -35,7 +35,7 @@ export function Earnings() {
   const addEarning = (amount) => {
     setEarnings([...earnings, { id: uuidv4(), amount }]);
   };
-
+  
   return (
     <div className={styles.earnings}>
       <header className={styles.earnings_header}>
